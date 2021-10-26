@@ -26,7 +26,6 @@ $ multiqc fastqc_raw -o multiqc_raw
 ![Alt text](/imgs/raw_count.png?raw=true "Optional Title")
 ![Alt text](/imgs/raw_score.png?raw=true "Optional Title")
 
-
 ---
 
 ```
@@ -39,6 +38,12 @@ $ ls *trimmed -1 | xargs -tI{} fastqc {} -o fastqc_trimmed
 $ multiqc fastqc_trimmed -o multiqc_trimmed
 ```
 ---
+
+![Alt text](/imgs/trim_count.png?raw=true "Optional Title")
+![Alt text](/imgs/trim_score.png?raw=true "Optional Title")
+
+---
+
 ```
 $ screen -S mashishkin_1_assemble
 $ bash
