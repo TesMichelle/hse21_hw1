@@ -1,1 +1,4 @@
 *.txt
+#*.git*
+.DS_Store
+.ipynb*
