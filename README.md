@@ -1,8 +1,8 @@
 
 # commands
-
+```
 $ ls /usr/share/data-minor-bioinf/assembly/* | xargs -tI{} ln -s {}
-
+```
 ---
 ```
 $ eqtk sample -s 10052001 oil_R1.fastq 5000000 > PE1.fq
