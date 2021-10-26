@@ -1,7 +1,7 @@
 
 # commands
 
-ls /usr/share/data-minor-bioinf/assembly/* | xargs -tI{} ln -s {}
+$ ls /usr/share/data-minor-bioinf/assembly/* | xargs -tI{} ln -s {}
 
 ---
 ```
