@@ -74,5 +74,5 @@ $ platanus assemble -o low -f PE1_.fq.trimmed PE2_.fq.trimmed
 $ platanus scaffold -o low -c low_contig.fa -IP1 PE1_.fq.trimmed PE2_.fq.trimmed -OP2 MP1_.fq.int_trimmed $ MP2_.fq.int_trimmed
 $ platanus gap_close -o low -c low_scaffold.fa -IP1 PE1_.fq.trimmed PE2_.fq.trimmed -OP2 MP1_.fq.int_trimmed $ MP2_.fq.int_trimmed
 ```
-## Результаты
+### Результаты
 При меньшем количестве доступных ридов, количество и длина гепов увеличились. (см. notebook)
