@@ -28,6 +28,7 @@ $ multiqc fastqc_raw -o multiqc_raw
 ```
 $ platanus_trim PE1.fq PE2.fq
 $ platanus_internal_trim MP1.fq MP2.fq
+$ rm *.fq
 ```
 ```
 $ mkdir fastqc_trimmed
@@ -47,6 +48,7 @@ $ bash
 $ platanus assemble -o Poil -f PE1.fq.trimmed PE2.fq.trimmed 2> assemble.log
 $ platanus scaffold -o Poil -c Poil_contig.fa -IP1 PE1.fq.trimmed PE2.fq.trimmed -OP2 MP1.fq.int_trimmed $ MP2.fq.int_trimmed 2> scaffold.LOGFILE
 $ platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 PE1.fq.trimmed PE2.fq.trimmed -OP2 MP1.fq.int_trimmed $ MP2.fq.int_trimmed 2> gap_close.log
+$ rm *trimmed
 ```
 
 ## Результаты
@@ -64,12 +66,14 @@ $ seqtk sample -s 10052001 oilMP_S4_L001_R2_001.fastq 0.5 > MP2_.fq
 ```
 $ platanus_trim PE1_.fq PE2_.fq
 $ platanus_internal_trim MP1_.fq MP2_.fq
+$ rm *.fq
 ```
 
 ```
 $ platanus assemble -o low -f PE1_.fq.trimmed PE2_.fq.trimmed
 $ platanus scaffold -o low -c low_contig.fa -IP1 PE1_.fq.trimmed PE2_.fq.trimmed -OP2 MP1_.fq.int_trimmed $ MP2_.fq.int_trimmed
 $ platanus gap_close -o low -c low_scaffold.fa -IP1 PE1_.fq.trimmed PE2_.fq.trimmed -OP2 MP1_.fq.int_trimmed $ MP2_.fq.int_trimmed
+$ rm *trimmed
 ```
 ### Результаты
 При меньшем количестве доступных ридов, количество и длина гепов увеличились. (см. notebook)
