@@ -22,6 +22,13 @@ $ multiqc fastqc_raw -o multiqc_raw
 ```
 
 ---
+
+![Alt text](/imgs/raw_count.png?raw=true "Optional Title")
+![Alt text](/imgs/raw_score.png?raw=true "Optional Title")
+
+
+---
+
 ```
 $ platanus_trim PE1.fq PE2.fq
 $ platanus_internal_trim MP1.fq MP2.fq
