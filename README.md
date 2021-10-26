@@ -1,5 +1,5 @@
 
-# commands
+# Основное задание
 ```
 $ ls /usr/share/data-minor-bioinf/assembly/* | xargs -tI{} ln -s {}
 ```
@@ -51,6 +51,11 @@ $ platanus assemble -o Poil -f PE1.fq.trimmed PE2.fq.trimmed 2> assemble.log
 $ platanus scaffold -o Poil -c Poil_contig.fa -IP1 PE1.fq.trimmed PE2.fq.trimmed -OP2 MP1.fq.int_trimmed $ MP2.fq.int_trimmed 2> scaffold.LOGFILE
 $ platanus gap_close -o Poil -c Poil_scaffold.fa -IP1 PE1.fq.trimmed PE2.fq.trimmed -OP2 MP1.fq.int_trimmed $ MP2.fq.int_trimmed 2> gap_close.log
 ```
+
+## Результаты
+Среднее качество прочтения выросло после `platanus_trim` и `platanus_internal_trim`.
+После использования `platanus gap_close` количество и длина гепов уменьшились. (см. notebook)
+
 ### Доп. задание
 ```
 $ seqtk sample -s 10052001 oil_R1.fastq 0.5 > PE1_.fq
@@ -69,3 +74,5 @@ $ platanus assemble -o low -f PE1_.fq.trimmed PE2_.fq.trimmed
 $ platanus scaffold -o low -c low_contig.fa -IP1 PE1_.fq.trimmed PE2_.fq.trimmed -OP2 MP1_.fq.int_trimmed $ MP2_.fq.int_trimmed
 $ platanus gap_close -o low -c low_scaffold.fa -IP1 PE1_.fq.trimmed PE2_.fq.trimmed -OP2 MP1_.fq.int_trimmed $ MP2_.fq.int_trimmed
 ```
+## Результаты
+При меньшем количестве доступных ридов, количество и длина гепов увеличились. (см. notebook)
